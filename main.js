@@ -1,21 +1,31 @@
-
-
 function getComputerChoice(opt) {
     const randomIndex = Math.floor(Math.random()* opt.length);
     const item = opt[randomIndex];
     return item;
 }
+
 const options = ["Rock", "Paper", "Scissors"];
 
 let pScore = 0
 let cScore = 0
 let round = 0
 
-const btn = document.querySelector('#btn');
-btn.addEventListener('click', () => {
+const rbtn = document.querySelector('#rbtn');
+rbtn.addEventListener('click', () => {
     playerSelection = 'Rock';
-    playRound();
-   
+    playRound();   
+})
+
+const pbtn = document.querySelector('#pbtn');
+pbtn.addEventListener('click', () => {
+    playerSelection = 'Paper';
+    playRound();   
+})
+
+const sbtn = document.querySelector('#sbtn');
+sbtn.addEventListener('click', () => {
+    playerSelection = 'Scissors';
+    playRound();   
 })
 
 function matchup(playerSelection,computerSelection){
